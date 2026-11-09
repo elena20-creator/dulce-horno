@@ -1,0 +1,256 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Source Sans 3", Arial, sans-serif;
+  background-color: #fdf6ee;
+  color: #3d2b1f;
+  line-height: 1.55;
+  min-height: 100vh;
+}
+
+.bakery-header {
+  background-color: #fff8f0;
+  border-bottom: 3px solid #b76e79;
+  padding: 32px 28px 28px;
+  text-align: left;
+}
+
+.bakery-header h1 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 2.5rem;
+  color: #5c3317;
+  font-weight: 700;
+}
+
+.tagline {
+  font-family: "Source Sans 3", Arial, sans-serif;
+  margin-top: 6px;
+  color: #8a5a44;
+  font-size: 1.05rem;
+}
+
+.page-wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 30px 24px 48px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  align-items: flex-start;
+}
+
+.side-panel {
+  width: 240px;
+  flex-shrink: 0;
+}
+
+.side-panel h2,
+.catalog h2 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.25rem;
+  color: #5c3317;
+  margin-bottom: 12px;
+}
+
+.tab-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 28px;
+}
+
+.tab-btn {
+  font-family: "Source Sans 3", Arial, sans-serif;
+  background-color: transparent;
+  color: #8a5a44;
+  border: none;
+  border-bottom: 2px solid #e8d5c4;
+  border-radius: 0;
+  padding: 10px 4px;
+  font-size: 0.98rem;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+}
+
+.tab-btn:hover {
+  color: #b76e79;
+  border-bottom-color: #b76e79;
+}
+
+.tab-btn.selected {
+  color: #b76e79;
+  border-bottom-color: #b76e79;
+  font-weight: 700;
+}
+
+.price-box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.price-box label {
+  font-family: "Source Sans 3", Arial, sans-serif;
+  color: #5c3317;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.price-box input {
+  font-family: "Source Sans 3", Arial, sans-serif;
+  background-color: #ffffff;
+  color: #3d2b1f;
+  border: 2px solid #e0c9b0;
+  border-radius: 4px;
+  padding: 10px 12px;
+  width: 100%;
+  font-size: 0.95rem;
+}
+
+.price-box input:focus {
+  outline: none;
+  border-color: #b76e79;
+}
+
+.search-btn {
+  font-family: "Source Sans 3", Arial, sans-serif;
+  background-color: #b76e79;
+  color: #ffffff;
+  border: 2px solid #b76e79;
+  border-radius: 4px;
+  padding: 10px 14px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.search-btn:hover {
+  background-color: #9e5a65;
+  border-color: #9e5a65;
+}
+
+.catalog {
+  flex: 1;
+  min-width: 280px;
+}
+
+.table-scroll {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.cake-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  border: 1px solid #e8d5c4;
+}
+
+.cake-table thead {
+  background-color: #f3e0d0;
+}
+
+.cake-table th {
+  font-family: "Playfair Display", Georgia, serif;
+  color: #5c3317;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: left;
+  padding: 14px 16px;
+  border-bottom: 2px solid #d4b896;
+}
+
+.cake-table td {
+  font-family: "Source Sans 3", Arial, sans-serif;
+  padding: 12px 16px;
+  border-bottom: 1px solid #f0e4d8;
+  color: #3d2b1f;
+}
+
+.cake-table tbody tr:hover {
+  background-color: #fff8f0;
+}
+
+.cell-name {
+  font-weight: 600;
+}
+
+.cell-category {
+  color: #8a5a44;
+}
+
+.cell-price {
+  font-weight: 700;
+  color: #b76e79;
+  white-space: nowrap;
+}
+
+.empty-note {
+  font-family: "Source Sans 3", Arial, sans-serif;
+  margin-top: 16px;
+  padding: 18px;
+  background-color: #fff8f0;
+  border: 1px solid #e8d5c4;
+  color: #8a5a44;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.bakery-footer {
+  font-family: "Source Sans 3", Arial, sans-serif;
+  text-align: left;
+  padding: 18px 28px;
+  border-top: 1px solid #e8d5c4;
+  color: #a08070;
+  font-size: 0.9rem;
+  background-color: #fff8f0;
+}
+
+@media (max-width: 768px) {
+  .bakery-header {
+    padding: 24px 18px;
+  }
+
+  .bakery-header h1 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 1.9rem;
+  }
+
+  .page-wrap {
+    flex-direction: column;
+    padding: 22px 16px 36px;
+  }
+
+  .side-panel {
+    width: 100%;
+  }
+
+  .tab-row {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .tab-btn {
+    border: 1px solid #e8d5c4;
+    border-bottom: 2px solid #e8d5c4;
+    padding: 8px 12px;
+    border-radius: 4px;
+  }
+
+  .tab-btn.selected {
+    border-color: #b76e79;
+    background-color: #fff0f2;
+  }
+
+  .cake-table th,
+  .cake-table td {
+    padding: 10px 12px;
+    font-size: 0.92rem;
+  }
+}

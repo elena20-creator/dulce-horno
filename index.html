@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dulce Horno - Catálogo de Pasteles</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="bakery-header">
+    <h1>Dulce Horno</h1>
+    <p class="tagline">Pasteles, cheesecakes y postres hechos con cariño</p>
+  </header>
+
+  <main class="page-wrap">
+    <aside class="side-panel">
+      <!-- Filtros por categoría -->
+      <h2>Categorías</h2>
+      <nav class="tab-row" id="tab-row">
+        <button type="button" class="tab-btn selected" data-cat="todas">Ver todos</button>
+        <button type="button" class="tab-btn" data-cat="Pasteles">Pasteles</button>
+        <button type="button" class="tab-btn" data-cat="Cheesecakes">Cheesecakes</button>
+        <button type="button" class="tab-btn" data-cat="Cupcakes">Cupcakes</button>
+        <button type="button" class="tab-btn" data-cat="Postres">Postres</button>
+      </nav>
+
+      <!-- Filtro por precio máximo -->
+      <h2>Precio máximo</h2>
+      <div class="price-box">
+        <label for="tope-precio">Hasta (USD):</label>
+        <input type="number" id="tope-precio" min="0" step="0.01" placeholder="Ej. 20">
+        <button type="button" id="btn-precio" class="search-btn">Filtrar precio</button>
+      </div>
+    </aside>
+
+    <section class="catalog">
+      <h2>Lista de productos</h2>
+      <div class="table-scroll">
+        <table id="cake-table" class="cake-table">
+          <thead>
+            <tr>
+              <th>Producto</th>
+              <th>Categoría</th>
+              <th>Precio</th>
+            </tr>
+          </thead>
+          <tbody id="table-body">
+          </tbody>
+        </table>
+      </div>
+      <p id="empty-note" class="empty-note" hidden></p>
+    </section>
+  </main>
+
+  <footer class="bakery-footer">
+    <p>Dulce Horno · Catálogo generado con JavaScript</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
